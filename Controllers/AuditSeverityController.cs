@@ -22,7 +22,7 @@ namespace AuditSeverityService.Controllers
         }
 
         [HttpPost]
-//        [Authorize]
+        [Authorize]
         public ActionResult<AuditResponse> ProjectExecutionStatus([FromBody] AuditRequest AuditRequest)
         {
             if (!AuditRequest.AuditDetails.AuditType.Equals("Internal",StringComparison.InvariantCultureIgnoreCase) && !AuditRequest.AuditDetails.AuditType.Equals("SOX",StringComparison.InvariantCultureIgnoreCase)) //Incase of Invalid Input
