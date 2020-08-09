@@ -37,9 +37,9 @@ namespace AuditSeverityService.Controllers
             using (var client = new HttpClient())
             {
 
-                //   client.BaseAddress = new Uri("https://localhost:44315/"); //URL for BenchMark API
+             //      client.BaseAddress = new Uri("https://localhost:44315/"); //URL for BenchMark API
 
-                client.BaseAddress = new Uri("http://52.154.200.184/");     //cloud benchmark service url
+                client.BaseAddress = new Uri("http://40.81.28.10/");     //cloud benchmark service url
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = new HttpResponseMessage();
                 response = client.GetAsync("api/AuditBenchmark").Result;
